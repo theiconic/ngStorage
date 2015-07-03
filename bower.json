@@ -1,5 +1,5 @@
 {
-    "name": "ngstorage",
+    "name": "theiconic-ngstorage",
     "version": "0.3.8",
     "main": "./ngStorage.js",
     "keywords": [
@@ -31,6 +31,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git://github.com/gsklee/ngStorage.git"
+        "url": "git://github.com/theiconic/ngStorage.git"
     }
 }
