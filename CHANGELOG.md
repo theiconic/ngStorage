@@ -1,3 +1,13 @@
+### 0.3.9 / 2015.07.06
+* Optimize for minified size
+
+---
+
+### 0.3.8 / 2015.07.03
+* Add $apply to force immediate application of changes
+
+---
+
 ### 0.3.0 / 2013.10.16
 * Remove the force overwrite on each cycle which has been causing inadvertent side effects such as breaking object references, changing `$$hashKey`s, or modifying user code behaviors.
 * Add dirty-check debouncing. ([#2](https://github.com/gsklee/ngStorage/issues/2))
