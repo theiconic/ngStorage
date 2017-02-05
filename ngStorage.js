@@ -164,7 +164,7 @@
                         newValue = event.newValue,
                         $storageKey;
 
-                    if (!$key) {
+                    if (!key) {
                         return;
                     }
 
