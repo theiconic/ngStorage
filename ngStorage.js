@@ -159,10 +159,16 @@
                 });
 
                 // #6: Use `$window.addEventListener` instead of `angular.element` to avoid the jQuery-specific `event.originalEvent`
-                $window.addEventListener && $window.addEventListener('storage', function(event) {
+                $window.addEventListener('storage', function(event) {
                     var key = event.key,
                         newValue = event.newValue,
-                        $storageKey = getStorageKey(key);
+                        $storageKey;
+
+                    if (!$key) {
+                        return;
+                    }
+
+                    $storageKey = getStorageKey(key);
 
                     if (key === STORAGE_PREFIX + $storageKey) {
                         newValue ? $storage[$storageKey] = decode(newValue) : delete $storage[$storageKey];
