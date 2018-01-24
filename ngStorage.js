@@ -175,7 +175,9 @@
 
                         _last$storage = copy($storage);
 
-                        $rootScope.$apply();
+                        if (!$rootScope.$$phase) {
+                            $rootScope.$apply();
+                        }
                     }
                 });
 
