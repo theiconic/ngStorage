@@ -77,10 +77,10 @@
                         supported = false;
                     }
 
-                    // When Safari (OS X or iOS) is in private browsing mode, it appears as though localStorage
+                    // When Safari (OS X or iOS) is in private browsing mode, it appears as though localStorage/sessionStorage
                     // is available, but trying to call .setItem throws an exception below:
                     // "QUOTA_EXCEEDED_ERR: DOM Exception 22: An attempt was made to add something to storage that exceeded the quota."
-                    if (supported && storageType === 'localStorage') {
+                    if (supported) {
                         var key = '__' + Math.round(Math.random() * 1e7);
 
                         try {
